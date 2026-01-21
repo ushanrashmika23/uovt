@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
@@ -54,6 +55,21 @@ export default function Page() {
 
 
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
@@ -74,11 +90,11 @@ export default function Page() {
     }, []);
 
     return (
-        <div className="mb-8">
-            <div className="sticky top-7 z-50 bg-amber-100 w-9/12 mx-auto">
-                <Navbar />
+        <div className="mb-0">
+            <div className={`z-50 mx-auto transition-all duration-300 ${isScrolled ? 'fixed top-[-20px] w-full shadow-md mt-0 left-0' : 'fixed top-7 w-9/12 rounded-lg left-0 right-0'}`}>
+                <Navbar isScrolled={isScrolled} />
             </div>
-            <section className="relative h-[85vh] min-h-[550px] w-full">
+            <section className="relative h-[85vh] min-h-137.5 w-full">
                 {/* Background image */}
                 <Image
                     src={data[currentIndex].img}

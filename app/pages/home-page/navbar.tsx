@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Navbar() {
+export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     return (
-        <header className="absolute top-0 z-50 w-full">
+        <header className={`w-full transition-all duration-300`}>
             {/* Top utility bar */}
             <div className="">
-                <div className="bg-gray-300 w-fit p-6 py-2 flex justify-self-end gap-6 text-xs font-medium">
+                <div className={`bg-gray-300 w-fit px-6 py-2 flex justify-self-end gap-6 text-xs font-medium transition-all duration-300 ${isScrolled ? 'opacity-0 h-0 overflow-hidden py-0' : 'opacity-100'}`}>
                     <a href="#">STAFF</a>
                     <a href="#">STUDENT HUB</a>
                     <a href="#">ALUMNI</a>
@@ -13,8 +13,8 @@ export default function Navbar() {
             </div>
 
             {/* Main navbar */}
-            <div className="bg-white">
-                <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <div className={`${isScrolled ? 'bg-white shadow-md' : 'bg-white'} transition flex justify-center`}>
+                <div className={`px-6 py-4 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'w-9/12' : 'w-full'}`}>
                     {/* Logo */}
                     <div className="flex items-center gap-3">
                         <img src="https://portal.uovt.ac.lk/front-assets/images/logo/UoVT-icon.png" alt="UOVT Logo" className="h-20" />
