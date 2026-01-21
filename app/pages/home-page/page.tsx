@@ -109,32 +109,41 @@ export default function Page() {
                 <div className="absolute inset-0 bg-black/50" />
 
 
-                {/* Content */}
-                <div className="relative z-10 p-32 flex  h-full max-w-7xl items-end">
-                    <div className="max-w-4xl bg-black/50 p-8">
-                        <h1 className="text-4xl md:text-7xl font-semibold text-white">
+                {/* --- Content Wrapper --- 
+            - Changed to 'w-9/12 mx-auto' to strictly align with your other sections.
+            - Removed fixed 'p-32' padding which breaks mobile layouts. 
+            - Used flex items-end to position text at bottom.
+        */}
+                <div className="relative z-10 w-full mx-auto h-full flex items-end pb-16 md:pb-24">
+
+                    <div className="max-w-4xl ml-18 animate-fadeIn bg-black/50 p-6 md:p-10">
+                        {/* Title */}
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                             {data[currentIndex].title}
                         </h1>
 
-                        <p className="text-md mt-4 text-lg uppercase text-white tracking-wide">
+                        {/* Description */}
+                        <p className="mt-4 text-sm md:text-lg text-gray-200 uppercase tracking-wide font-medium drop-shadow-md max-w-2xl">
                             {data[currentIndex].description}
                         </p>
 
-                        <a href={data[currentIndex].link} target='_BLANK'>
-                            <button className="mt-6 bg-yellow-400 px-6 py-3 text-sm font-bold text-black hover:bg-yellow-300 sharp-shadow">
-                                CHECK NOW!!
+                        {/* CTA Button */}
+                        <a href={data[currentIndex].link} target="_blank" rel="noopener noreferrer">
+                            <button className="mt-8 bg-[#FFE600] px-8 py-3.5 text-sm md:text-base font-extrabold text-black uppercase tracking-wider shadow-[6px_6px_0_#ffe60066]" style={{ boxShadow: '6px 6px 0 #ffe60066' }}>
+                                Check Now
                             </button>
                         </a>
                     </div>
+
                 </div>
 
                 {/* Slider dots */}
-                <div className="absolute bottom-6 right-6 flex gap-3">
+                <div className="absolute bottom-6 right-6 flex gap-4">
                     {data.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`h-4 w-4 transition-colors ${index === currentIndex ? 'bg-yellow-400' : 'bg-white/60'
+                            className={`h-5 w-5 transition-colors ${index === currentIndex ? 'bg-yellow-400' : 'bg-white/60'
                                 }`}
                         />
                     ))}
@@ -145,9 +154,9 @@ export default function Page() {
             <section className="relative w-full overflow-hidden bg-white my-8">
                 <div className="relative max-w-full px-0 py-20">
                     {/* Red background rectangle and yellow sahpe */}
-                    <div className="absolute left-0 top-0 h-112.5 w-[50%] bg-red-600 z-0" />
+                    <div className="absolute left-0 top-0 h-112.5 w-[50%] bg-[#D93337] z-0" />
                     <div
-                        className="absolute right-0 top-0 h-120 w-[75%] bg-yellow-400 z-0"
+                        className="absolute right-0 top-0 h-120 w-[75%] bg-[#FFDD00] z-0"
                         style={{
                             clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%)"
                         }}
@@ -166,13 +175,13 @@ export default function Page() {
                             />
                         </div>
 
-                        {/* Text */}
-                        <div className="text-black">
-                            <h1 className="text-5xl font-bold mb-4">
+                        {/* Text Section */}
+                        <div className="w-full md:w-1/2 text-black">
+                            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                                 Welcome To The UOVT
                             </h1>
 
-                            <p className="max-w-2xl mx-auto text-sm md:text-base leading-relaxed font-normal">
+                            <p className="text-base lg:text-lg leading-relaxed font-normal text-justify text-gray-900 mb-8">
                                 The University of Vocational Technology (UOVT), Rathmalana,
                                 is a leading state university in Sri Lanka dedicated to
                                 vocational and technological education. We nurture humanity
@@ -180,8 +189,9 @@ export default function Page() {
                                 and socially responsible professionals.
                             </p>
 
-                            <button className="mt-6 text-lg font-semibold hover:underline">
-                                Read More →
+                            <button className="group inline-flex items-center text-lg font-bold">
+                                Read More
+                                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                             </button>
                         </div>
 
@@ -884,7 +894,7 @@ export default function Page() {
         Positioned with negative margin (-mt-16) to pull it up and overlap 
         the bottom of the yellow section.
       */}
-                <div className="w-9/12 mx-auto -mt-20 -mb-24 relative z-20">
+                <div className="w-9/12 mx-auto -mt-28 -mb-8 relative z-20">
                     <div className="bg-[#3B4685] rounded-xl text-white py-8 px-4 shadow-lg flex flex-col md:flex-row justify-around items-center gap-8 md:gap-0">
 
                         {/* Phone */}
