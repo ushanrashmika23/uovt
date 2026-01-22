@@ -13,6 +13,7 @@ import UniversityLifeSection from './components/UniversityLifeSection';
 import NewsSection from './components/NewsSection';
 import EventsAndNoticesSection from './components/EventsAndNoticesSection';
 import ContactInfoBar from './components/ContactInfoBar';
+import StickyApplyWidget from './components/StickyApplyWidget';
 
 export default function Page() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -36,6 +37,8 @@ export default function Page() {
                 <Navbar isScrolled={isScrolled} />
             </div>
 
+            <StickyApplyWidget />
+            
             <HeroSection />
 
             <WelcomeSection />
