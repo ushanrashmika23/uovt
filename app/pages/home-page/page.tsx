@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './navbar';
+import Navbar from './components/navbar';
 import HeroSection from './components/HeroSection';
 import WelcomeSection from './components/WelcomeSection';
 import AcademicsSection from './components/AcademicsSection';
@@ -51,7 +51,7 @@ export default function Page() {
             <ResearchSection />
 
             <UniversityLifeSection />
-            
+
             <div className="flex flex-col w-full">
                 <NewsSection />
             </div>
