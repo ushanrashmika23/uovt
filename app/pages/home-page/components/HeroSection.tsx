@@ -43,43 +43,42 @@ export default function HeroSection() {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 5000); // Auto slide every 5 seconds
+        const interval = setInterval(nextSlide, 5000);
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <section className="relative h-[85vh] min-h-137.5 w-full">
+        <section className="relative h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] min-h-[400px] w-full overflow-hidden">
             {/* Background image */}
             <Image
                 src={data[currentIndex].img}
-                alt="Students"
+                alt="Hero Background"
                 fill
-                loading="eager"
                 priority
-                className="object-cover transition-opacity duration-500"
+                className="object-cover transition-opacity duration-700"
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
             {/* --- Content Wrapper --- */}
-            <div className="relative z-10 w-full mx-auto h-full flex items-end pb-16 md:pb-24">
-                <div className="max-w-4xl ml-18 animate-fadeIn bg-black/50 p-6 md:p-10">
+            <div className="relative z-10 w-full h-full flex items-center md:items-end px-6 sm:px-12 md:px-16 lg:px-24 pb-12 md:pb-20 lg:pb-24">
+                <div className="max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-4xl animate-fadeIn bg-black/60 md:bg-black/50 p-6 md:p-8 lg:p-10">
                     {/* Title */}
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                         {data[currentIndex].title}
                     </h1>
 
                     {/* Description */}
-                    <p className="mt-4 text-sm md:text-lg text-gray-200 uppercase tracking-wide font-medium drop-shadow-md max-w-2xl">
+                    <p className="mt-3 md:mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-gray-200 uppercase tracking-wide font-medium drop-shadow-md">
                         {data[currentIndex].description}
                     </p>
 
                     {/* CTA Button */}
-                    <a href={data[currentIndex].link} target="_blank" rel="noopener noreferrer">
-                        <button 
-                            className="mt-8 bg-[#FFE600] px-8 py-3.5 text-sm md:text-base font-extrabold text-black uppercase tracking-wider shadow-[6px_6px_0_#ffe60066]" 
-                            style={{ boxShadow: '6px 6px 0 #ffe60066' }}
+                    <a href={data[currentIndex].link} target="_blank" rel="noopener noreferrer" className="inline-block">
+                        <button
+                            className="mt-6 md:mt-8 bg-[#FFE600] px-6 py-2.5 md:px-8 md:py-3.5 text-xs sm:text-sm md:text-base font-extrabold text-black uppercase tracking-wider transition-transform active:scale-95"
+                            style={{ boxShadow: '4px 4px 0 #ffe60066' }}
                         >
                             Check Now
                         </button>
@@ -88,12 +87,14 @@ export default function HeroSection() {
             </div>
 
             {/* Slider dots */}
-            <div className="absolute bottom-6 right-6 flex gap-4">
+            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex gap-2 md:gap-4">
                 {data.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`h-5 w-5 transition-colors ${index === currentIndex ? 'bg-yellow-400' : 'bg-white/60'}`}
+                        aria-label={`Go to slide ${index + 1}`}
+                        className={`h-3 w-3 md:h-4 md:w-4 transition-all ${index === currentIndex ? 'bg-[#FFE600] scale-110' : 'bg-white/50 hover:bg-white/80'
+                            }`}
                     />
                 ))}
             </div>
