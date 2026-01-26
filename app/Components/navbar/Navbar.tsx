@@ -15,6 +15,8 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
         { name: 'Events', href: '#' },
     ];
 
+    //TODO: fix the responsive navbar top margin issie after scolling on mobile mode
+
     return (
         <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'mt-[-20px]' : 'lg:px-20 pt-5 md:px-5 mt-[-20px]'}`}>
             {/* Top utility bar - Hidden on Mobile, Visible on Tablet/Desktop */}
@@ -29,18 +31,18 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
             {/* Main navbar */}
             <div className={`${isScrolled ? 'bg-white shadow-md' : 'bg-white'} transition flex justify-center`}>
                 <div className={`px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'w-full md:w-10/12' : 'w-full'}`}>
-                    
+
                     {/* Logo Section */}
                     <div className="flex items-center gap-2 md:gap-3">
-                        <img 
-                            src="https://portal.uovt.ac.lk/front-assets/images/logo/UoVT-icon.png" 
-                            alt="UOVT Logo" 
-                            className={`transition-all duration-300 ${isScrolled ? 'h-12 md:h-14' : 'h-14 md:h-20'}`} 
+                        <img
+                            src="https://portal.uovt.ac.lk/front-assets/images/logo/UoVT-icon.png"
+                            alt="UOVT Logo"
+                            className={`transition-all duration-300 ${isScrolled ? 'h-12 md:h-14' : 'h-14 md:h-20'}`}
                         />
                         <span className={`font-semibold leading-none transition-all duration-300 ${isScrolled ? 'text-[10px] md:text-xs' : 'text-xs md:text-sm'}`}>
                             UNIVERSITY OF<br />
                             <span className={`leading-none font-bold ${isScrolled ? 'text-sm md:text-lg' : 'text-lg md:text-2xl'}`}>
-                                VOCATIONAL <br/> TECHNOLOGY
+                                VOCATIONAL <br /> TECHNOLOGY
                             </span>
                         </span>
                     </div>
