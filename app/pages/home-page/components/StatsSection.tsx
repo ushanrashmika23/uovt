@@ -9,7 +9,7 @@ export default function StatsSection() {
             <div className="w-11/12 md:w-9/12 mx-auto">
 
                 {/* Top Section: Hero Image */}
-                <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-sm shadow-md">
+                <div className="relative w-full h-100 md:h-125 overflow-hidden rounded-sm shadow-md">
                     <Image
                         src="https://www.iit.ac.lk/wp-content/uploads/2025/11/IIT-UoW-Convocation-2025.png"
                         alt="Convocation Ceremony"
@@ -30,7 +30,7 @@ export default function StatsSection() {
                             UOVT provides globally recognized qualifications in the field of IT & Business.
                         </h3>
                         <p className="text-gray-900 text-sm md:text-base leading-relaxed text-justify">
-                            At UOVT, we offer vocational and technological degrees in engineering, IT, and business that prepare students for today's fast-changing world. Combining practical skills, academic excellence, and industry relevance, we have shaped higher education in Sri Lanka and helped thousands of alumni build successful careers locally and globally.
+                            At UOVT, we offer vocational and technological degrees in engineering, IT, and business that prepare students for today&apos;s fast-changing world. Combining practical skills, academic excellence, and industry relevance, we have shaped higher education in Sri Lanka and helped thousands of alumni build successful careers locally and globally.
                         </p>
                     </div>
 
