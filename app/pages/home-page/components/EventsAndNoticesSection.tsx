@@ -88,7 +88,7 @@ export default function EventsAndNoticesSection() {
 
                         {/* Header */}
                         <div className="flex justify-between items-center mb-8">
-                            <h2 className="text-2xl font-bold text-black">Events</h2>
+                            <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-black">Events</h2>
                             <a href="#" className="text-sm font-bold text-black flex items-center hover:underline">
                                 All Events <ChevronRightIcon className="w-4 h-4 ml-1" />
                             </a>
@@ -158,7 +158,7 @@ export default function EventsAndNoticesSection() {
 
                         <div>
                             {/* Header */}
-                            <h2 className="text-2xl font-bold text-black mb-8">Notice Board</h2>
+                            <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-black mb-8">Notice Board</h2>
 
                             {/* Notice Content */}
                             {/* Added min-h to keep buttons aligned at bottom even if text is short */}

@@ -5,11 +5,11 @@ import { ChevronLeftIcon, ChevronRightIcon } from './Icons';
 const professors = [
     {
         name: "Professor K.M.G. Prasanna Premadasa",
-        title: "Vice Chancellor Of The University",
+        title: "Vice Chancellor of the University",
         image: "https://uovt.ac.lk/wp-content/uploads/2015/10/Professor-K.M.G.-Prasanna-Premadasa.jpg",
         bio: [
-            "UOVT Is Driven By Curiosity And Ambition, Where Practical Skills Meet Technology And Students Are Empowered To Reach Their Full Potential. Our Programs Combine Academic Knowledge With Hands-On Experience.",
-            "As A Socially Committed University, UOVT Focuses On Excellence In Vocational And Technological Education, Applied Research, And Community Engagement."
+            "UOVT is driven by curiosity and ambition, where practical skills meet technology and students are empowered to reach their full potential. Our programs combine academic knowledge with hands-on experience.",
+            "As a socially committed university, UOVT focuses on excellence in vocational and technological education, applied research, and community engagement."
         ]
     },
     {

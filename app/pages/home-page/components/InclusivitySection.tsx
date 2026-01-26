@@ -10,22 +10,22 @@ interface CardData {
 const cards: CardData[] = [
     {
         title: "Scholarship",
-        description: "A Five-Year Work And Study Programme With Corporate Partners Where You Earn From Day One. Graduate With A Degree And Five Years Of Experience, Giving You A Valuable Head Start In Your Career.",
+        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
         img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
     },
     {
         title: "Dean List",
-        description: "A Five-Year Work And Study Programme With Corporate Partners Where You Earn From Day One. Graduate With A Degree And Five Years Of Experience, Giving You A Valuable Head Start In Your Career.",
+        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
         img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
     },
     {
         title: "Bursary",
-        description: "A Five-Year Work And Study Programme With Corporate Partners Where You Earn From Day One. Graduate With A Degree And Five Years Of Experience, Giving You A Valuable Head Start In Your Career.",
+        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
         img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
     },
     {
         title: "Grant",
-        description: "A Five-Year Work And Study Programme With Corporate Partners Where You Earn From Day One. Graduate With A Degree And Five Years Of Experience, Giving You A Valuable Head Start In Your Career.",
+        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
         img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
     }
 ];

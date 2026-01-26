@@ -9,10 +9,10 @@ export default function AcademicsSection() {
 
                 {/* Header Section */}
                 <div className="text-center mb-10">
-                    <h2 className="text-5xl font-bold text-black mb-6">Academics</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">Academics</h2>
                     <p className="text-gray-600 max-w-4xl mx-auto text-sm md:text-base leading-relaxed font-medium">
-                        We Offer A Multi-Range Degree Program Across Four Main Departments: Science, Arts, Mathematics, And Information Studies. Our Courses
-                        Provide Wide-Ranging Knowledge And Practical Skills, Helping Students Grow Academically, Think Creatively, And Achieve Their Best Potential.
+                        We offer a multi-range degree program across four main departments: Science, Arts, Mathematics, and Information Studies. Our courses
+                        provide wide-ranging knowledge and practical skills, helping students grow academically, think creatively, and achieve their best potential.
                     </p>
                 </div>
 

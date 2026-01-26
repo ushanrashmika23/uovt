@@ -7,8 +7,8 @@ export default function UniversityLifeSection() {
 
                 {/* Header */}
                 <div className="mb-12 text-center">
-                    <h2 className="text-4xl font-bold mb-4">University Life</h2>
-                    <p className="mx-auto max-w-3xl text-sm text-gray-600">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">University Life</h2>
+                    <p className="mx-auto max-w-3xl text-sm md:text-base text-gray-600">
                         A multi-range degree program across Science, Arts, Mathematics, and Information Studies.
                     </p>
                 </div>

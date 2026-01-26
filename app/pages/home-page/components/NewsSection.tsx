@@ -4,7 +4,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from './Icons';
 // 1. Defined Data Structures
 const featuredNews = {
     date: "Dec 6, 2025",
-    title: "Shri Ram College of Commerce and the University of Vocational tecnology Forge Stronger Academic Collaboration",
+    title: "Shri Ram College of Commerce and the University of Vocational Technology forge stronger academic collaboration",
     image: "https://images.stockcake.com/public/6/f/7/6f7a6350-4c31-419b-9875-1030d373801f_large/academic-collaboration-meeting-stockcake.jpg"
 };
 
@@ -12,28 +12,28 @@ const newsList = [
     {
         id: 1,
         date: "Dec 8, 2025",
-        title: "New Research Grant Approved for AI Development",
+        title: "New research grant approved for AI development",
         institution: "Faculty of IT",
         image: "https://images.stockcake.com/public/5/5/2/55297316-2428-4444-8848-d34e9177a296_large/futuristic-ai-interface-stockcake.jpg"
     },
     {
         id: 2,
         date: "Dec 10, 2025",
-        title: "Inter-University Sports Championship 2025 Begins",
+        title: "Inter-university sports championship 2025 begins",
         institution: "Sports Council",
         image: "https://images.stockcake.com/public/6/3/6/6360436d-9781-4560-84c9-c196412b9d03_large/intense-sports-match-stockcake.jpg"
     },
     {
         id: 3,
         date: "Dec 12, 2025",
-        title: "Annual Arts Exhibition 'Creative Horizon' Opens",
+        title: "Annual arts exhibition 'Creative Horizon' opens",
         institution: "Dept. of Aesthetics",
         image: "https://images.stockcake.com/public/9/7/2/97210665-27a9-467f-94a0-760372074f0a_large/art-gallery-exhibit-stockcake.jpg"
     },
     {
         id: 4,
         date: "Dec 15, 2025",
-        title: "Convocation Ceremony Scheduled for January",
+        title: "Convocation ceremony scheduled for January",
         institution: "Registrar Office",
         image: "https://images.stockcake.com/public/3/6/f/36fa17c6-7f8e-4f51-a20c-c69818840e69_large/graduate-holding-diploma-stockcake.jpg"
     }
@@ -60,7 +60,7 @@ export default function NewsSection() {
 
                 {/* Header */}
                 <div className="flex justify-between items-center mb-10">
-                    <h2 className="text-3xl font-bold text-black">News</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">News</h2>
                     <a href="#" className="flex items-center text-sm font-bold text-black hover:underline">
                         All News <ChevronRightIcon className="w-4 h-4 ml-1" />
                     </a>

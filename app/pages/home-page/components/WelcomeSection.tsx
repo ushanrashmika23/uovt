@@ -27,11 +27,11 @@ export default function WelcomeSection() {
 
                     {/* Text Section */}
                     <div className="w-full md:w-1/2 text-black">
-                        <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            Welcome To The UOVT
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                            Welcome to the UOVT
                         </h1>
 
-                        <p className="text-base lg:text-xl leading-relaxed font-normal text-justify text-gray-900 mb-8">
+                        <p className="text-sm md:text-base lg:text-lg leading-relaxed font-normal text-justify text-gray-900 mb-8">
                             The University of Vocational Technology (UOVT), Rathmalana,
                             is a leading state university in Sri Lanka dedicated to
                             vocational and technological education. We nurture humanity
