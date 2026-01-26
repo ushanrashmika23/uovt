@@ -15,10 +15,9 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
         { name: 'Events', href: '#' },
     ];
 
-    //TODO: fix the responsive navbar top margin issie after scolling on mobile mode
 
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'mt-[-20px]' : 'lg:px-20 pt-5 md:px-5 mt-[-20px]'}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'md:mt-[-20px]' : 'lg:px-20 pt-5 md:px-5 mt-[-20px]'}`}>
             {/* Top utility bar - Hidden on Mobile, Visible on Tablet/Desktop */}
             <div className="hidden md:flex justify-end">
                 <div className={`bg-gray-300 w-fit px-6 py-2 flex gap-6 text-[10px] lg:text-xs font-medium transition-all duration-300 ${isScrolled ? 'opacity-0 h-0 overflow-hidden py-0' : 'opacity-100'}`}>

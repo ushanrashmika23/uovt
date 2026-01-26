@@ -41,7 +41,7 @@ export default function InclusivitySection() {
         if (scrollRef.current) {
             const container = scrollRef.current;
             const firstCard = container.firstElementChild as HTMLElement;
-            
+
             if (firstCard) {
                 let itemWidth = firstCard.offsetWidth;
                 // Calculate item width including gap
@@ -74,7 +74,7 @@ export default function InclusivitySection() {
         if (scrollRef.current) {
             const container = scrollRef.current;
             const firstCard = container.firstElementChild as HTMLElement;
-            
+
             if (firstCard) {
                 let itemWidth = firstCard.offsetWidth;
                 if (container.children.length > 1) {
@@ -110,10 +110,10 @@ export default function InclusivitySection() {
                 } else {
                     itemWidth += 32;
                 }
-                
+
                 // Scroll to the first item of the target page
                 const targetCardIndex = pageIndex * itemsPerScreen;
-                
+
                 container.scrollTo({
                     left: itemWidth * targetCardIndex,
                     behavior: 'smooth'
@@ -125,7 +125,7 @@ export default function InclusivitySection() {
     return (
         <section className="w-full py-16 bg-white">
             <div className="w-11/12 md:w-9/12 mx-auto">
-                
+
                 {/* Header */}
                 <div className="mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold leading-tight text-black max-w-4xl">
@@ -138,15 +138,15 @@ export default function InclusivitySection() {
 
                 {/* Slider Container */}
                 <div className="relative group">
-                    <div 
+                    <div
                         ref={scrollRef}
                         onScroll={handleScroll}
                         className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-8 pb-8"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {cards.map((card, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="min-w-full sm:min-w-[calc(50%-16px)] md:min-w-[calc(33.333%-21.333px)] lg:min-w-[calc(25%-24px)] snap-start flex flex-col"
                             >
                                 <img src={card.img} alt={card.title} className="w-full h-auto mb-4" />
@@ -165,9 +165,8 @@ export default function InclusivitySection() {
                             <button
                                 key={index}
                                 onClick={() => scrollToPage(index)}
-                                className={`h-2 transition-all duration-300 rounded-full ${
-                                    activeIndex === index ? 'w-8 bg-black' : 'w-2 bg-gray-300'
-                                }`}
+                                className={`h-2 transition-all duration-300 rounded-full ${activeIndex === index ? 'w-8 bg-black' : 'w-2 bg-gray-300'
+                                    }`}
                                 aria-label={`Go to page ${index + 1}`}
                             />
                         ))}
@@ -175,7 +174,7 @@ export default function InclusivitySection() {
                 </div>
 
             </div>
-            
+
             {/* Global style to hide scrollbar for Chromium browsers */}
             <style>{`
                 .scrollbar-hide::-webkit-scrollbar {

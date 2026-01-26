@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { TrophyIcon, UserCheckIcon, UsersIcon, BookIcon } from './Icons';
+import { TrophyIcon, BriefcaseIcon, UsersIcon, GraduationCapIcon } from './Icons';
 
 export default function StatsSection() {
     return (
@@ -50,7 +50,7 @@ export default function StatsSection() {
                         {/* Stat 2: Employability */}
                         <div className="flex flex-col items-center text-center">
                             <div className="mb-3 text-gray-500">
-                                <UserCheckIcon className="w-10 h-10" />
+                                <BriefcaseIcon className="w-10 h-10" />
                             </div>
                             <p className="text-gray-600 text-sm font-medium">Employability</p>
                             <p className="text-2xl font-bold text-black">100%</p>
@@ -68,7 +68,7 @@ export default function StatsSection() {
                         {/* Stat 4: Programmes */}
                         <div className="flex flex-col items-center text-center">
                             <div className="mb-3 text-gray-500">
-                                <BookIcon className="w-10 h-10" />
+                                <GraduationCapIcon className="w-10 h-10" />
                             </div>
                             <p className="text-gray-600 text-sm font-medium">Programmes</p>
                             <p className="text-2xl font-bold text-black">25+</p>
