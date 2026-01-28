@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, Search } from 'lucide-react';
+import { s } from 'framer-motion/client';
 
 export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,31 +10,89 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
 
     // Updated structure to support nested sub-links
     const navLinks = [
-        { name: 'Home', href: '#' },
-        { name: 'About UOVT', href: '#' },
-        { name: 'Academic', href: '#' },
-        { name: 'Admissions', href: '#' },
         {
-            name: 'University Life',
-            href: '#',
+            name: 'Study', href: '#',
             subLinks: [
-                { name: 'Students Life', href: '#' },
-                { name: 'Annual Events', href: '#' },
                 {
-                    name: 'Sports',
-                    href: '#',
+                    name: 'Faculties', href: '#',
                     subLinks: [
-                        { name: 'Cricket', href: '#' },
-                        { name: 'Rugby', href: '#' },
-                        { name: 'Swimming', href: '#' }
+                        { name: 'Faculty 1', href: '#' },
+                        { name: 'Faculty 2', href: '#' },
+                        { name: 'Faculty 3', href: '#' },
                     ]
                 },
-                { name: 'Clubs & Societies', href: '#' },
-                { name: 'Student Union', href: '#' },
-                { name: 'Facilities', href: '#' },
+                {
+                    name: 'HRDC', href: '#',
+                    subLinks: [
+                        { name: 'Course 1', href: '#' },
+                        { name: 'Course 2', href: '#' },
+                        { name: 'Course 3', href: '#' },
+                    ]
+                },
+                {
+                    name: 'Centers & Institutes', href: '#',
+                    subLinks: [
+                        { name: 'Career Guidance Unit (CGU)', href: '#' },
+                        { name: 'Industrial Training Unit', href: '#' },
+                    ]
+                }, {
+                    name: 'Admission', href: '#',
+                    subLinks: [
+                        { name: 'Admission Process', href: '#' },
+                        { name: 'Payment', href: '#' },
+                        { name: 'Online Application Portal', href: '#' },
+                    ]
+                }
             ]
         },
-        { name: 'Research', href: '#' },
+        {
+            name: 'University Life', href: '#',
+            subLinks: [
+                { name: 'Annual Events', href: '#' },
+                { name: 'Sports', href: '#' },
+                { name: 'Summer with UoVT', href: '#' },
+                {
+                    name: 'Clubs and Societies', href: '#',
+                    subLinks: [
+                        { name: 'Club 1', href: '#' },
+                        { name: 'Club 2', href: '#' },
+                    ]
+                },
+                { name: 'Student Assembly', href: '#' },
+                { name: 'Success Stories', href: '#' },
+            ]
+        },
+        {
+            name: 'Research Industry', href: '#',
+            subLinks: [
+                { name: 'Publications', href: '#' },
+                { name: 'Innovation and patents', href: '#' },
+                { name: 'Awards and competitions', href: '#' },
+                { name: 'IRS', href: '#' },
+                { name: 'SRS', href: '#' },
+            ]
+        },
+        {
+            name: 'Community', href: '#',
+            subLinks: [
+                { name: 'Events', href: '#' },
+                { name: 'News', href: '#' },
+                { name: 'Notices', href: '#' },
+                { name: 'Social;', href: '#' },
+            ]
+        },
+        { name: 'About UOVT', href: '#',
+            subLinks: [
+                { name: 'History of UoVT', href: '#' },
+                { name: 'Leadership', href: '#' },
+                { name: 'Vision & Mission', href: '#' },
+                { name: 'Objectives', href: '#' },
+                { name: 'Quality & recognition', href: '#' },
+                { name: 'Sustainable development goals', href: '#' },
+                { name: 'Awards', href: '#' },
+                { name: 'University collages', href: '#' },
+            ]
+         },
     ];
 
     return (
@@ -45,6 +104,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                     <a href="#" className="hover:text-[#BE1E2D]">STAFF</a>
                     <a href="#" className="hover:text-[#BE1E2D]">STUDENT HUB</a>
                     <a href="#" className="hover:text-[#BE1E2D]">ALUMNI</a>
+                    <a href="#" className="hover:text-[#BE1E2D]">CONTACT</a>
                 </div>
             </div>
 
@@ -62,7 +122,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                         <span className={`font-semibold leading-none transition-all duration-300 ${isScrolled ? 'text-[9px]' : 'text-xs'}`}>
                             UNIVERSITY OF<br />
                             <span className={`leading-none font-bold text-black-800 ${isScrolled ? 'text-xs md:text-base' : 'text-lg md:text-xl'}`}>
-                                VOCATIONAL TECHNOLOGY
+                                VOCATIONAL<br />TECHNOLOGY
                             </span>
                         </span>
                     </div>
@@ -81,7 +141,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                                     <div className="absolute top-full left-0 w-56 bg-white shadow-xl border-t-4 border-[#BE1E2D] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                         {link.subLinks.map((sub) => (
                                             <div key={sub.name} className="relative group/sub">
-                                                <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50">
+                                                <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50">
                                                     {sub.name}
                                                     {sub.subLinks && <ChevronRight size={14} />}
                                                 </a>
@@ -90,7 +150,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                                                 {sub.subLinks && (
                                                     <div className="absolute top-0 left-full w-56 bg-white shadow-xl border-l border-gray-100 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
                                                         {sub.subLinks.map((deep) => (
-                                                            <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#BE1E2D]">
+                                                            <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D]">
                                                                 {deep.name}
                                                             </a>
                                                         ))}

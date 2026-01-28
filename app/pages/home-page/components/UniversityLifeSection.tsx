@@ -30,7 +30,7 @@ export default function UniversityLifeSection() {
 
                     {/* 2. Text 1: Full Width Bar on Mobile, Square on Desktop */}
                     <div className="col-span-2 lg:col-span-1 flex flex-col justify-center bg-lime-200 p-8 lg:aspect-square transition-all duration-300 hover:bg-lime-300 cursor-default">
-                        <p className="text-sm lg:text-[13px] leading-relaxed">
+                        <p className="text-md leading-relaxed">
                             Life at the University of Vocational Technology Rathmalana is vibrant
                             and engaging, offering students more than academic learning with
                             modern classrooms and well-equipped labs.
@@ -104,7 +104,7 @@ export default function UniversityLifeSection() {
 
                     {/* 9. Text 2: Full Width Footer on Mobile */}
                     <div className="col-span-2 lg:col-span-1 flex flex-col justify-center bg-cyan-100 p-8 lg:aspect-square transition-all duration-300 hover:bg-cyan-200 cursor-default">
-                        <p className="text-sm lg:text-[13px] leading-relaxed">
+                        <p className="text-md leading-relaxed">
                             Beyond academics, students enjoy activities that promote teamwork and leadership,
                             fostering a strong sense of community and lasting friendships.
                         </p>

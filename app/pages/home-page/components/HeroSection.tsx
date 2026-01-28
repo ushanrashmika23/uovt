@@ -48,7 +48,8 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] min-h-[400px] w-full overflow-hidden">
+        // <section className="relative h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] min-h-[400px] w-full overflow-hidden">
+        <section className="relative h-[100vh] w-full overflow-hidden">
             {/* Background image */}
             <Image
                 src={data[currentIndex].img}

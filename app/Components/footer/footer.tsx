@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+import { Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -31,17 +33,34 @@ export default function Footer() {
                         <div className="mt-6">
                             <p className="mb-3 font-semibold">Follow Us On</p>
                             <div className="flex gap-3">
-                                {["facebook", "linkedin", "instagram", "youtube", "tiktok"].map(
-                                    (item) => (
-                                        <a
-                                            key={item}
-                                            href="#"
-                                            className="flex h-8 w-8 items-center justify-center rounded bg-red-700 hover:bg-red-600"
-                                        >
-                                            <span className="sr-only">{item}</span>
-                                        </a>
-                                    )
-                                )}
+                                <a
+                                    href="#"
+                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook className="h-6 w-6" />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    aria-label="LinkedIn"
+                                >
+                                    <Linkedin className="h-6 w-6" />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram className="h-6 w-6" />
+                                </a>
+                                <a
+                                    href="#"
+                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    aria-label="YouTube"
+                                >
+                                    <Youtube className="h-6 w-6" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -50,10 +69,10 @@ export default function Footer() {
                     <div>
                         <h4 className="mb-4 text-lg font-semibold">Study</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li>Undergraduate</li>
-                            <li>Postgraduate</li>
-                            <li>Short Courses and CPD</li>
-                            <li>Partnerships</li>
+                            <li><Link href="/pages/acadamic-page" className="hover:text-white transition-colors">Undergraduate</Link></li>
+                            <li><Link href="/pages/postgraduate-page" className="hover:text-white transition-colors">Postgraduate</Link></li>
+                            <li><Link href="/pages/short-courses-page" className="hover:text-white transition-colors">Short Courses and CPD</Link></li>
+                            <li><Link href="/pages/partnerships-page" className="hover:text-white transition-colors">Partnerships</Link></li>
                         </ul>
                     </div>
 
@@ -61,10 +80,10 @@ export default function Footer() {
                     <div>
                         <h4 className="mb-4 text-lg font-semibold">Information for</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li>Current Students</li>
-                            <li>Current staff</li>
-                            <li>Alumni</li>
-                            <li>Solve self-service portal</li>
+                            <li><Link href="/pages/current-students-page" className="hover:text-white transition-colors">Current Students</Link></li>
+                            <li><Link href="/pages/current-staff-page" className="hover:text-white transition-colors">Current staff</Link></li>
+                            <li><Link href="/pages/alumni-page" className="hover:text-white transition-colors">Alumni</Link></li>
+                            <li><Link href="/pages/solve-portal-page" className="hover:text-white transition-colors">Solve self-service portal</Link></li>
                         </ul>
                     </div>
 
@@ -72,17 +91,17 @@ export default function Footer() {
                     <div>
                         <h4 className="mb-4 text-lg font-semibold">Also see</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li>News</li>
-                            <li>Events</li>
-                            <li>Job vacancies</li>
-                            <li>Legal</li>
-                            <li>Accessibility</li>
+                            <li><Link href="/pages/news-page" className="hover:text-white transition-colors">News</Link></li>
+                            <li><Link href="/pages/events-page" className="hover:text-white transition-colors">Events</Link></li>
+                            <li><Link href="/pages/vacancies-page" className="hover:text-white transition-colors">Job vacancies</Link></li>
+                            <li><Link href="/pages/legal-page" className="hover:text-white transition-colors">Legal</Link></li>
+                            <li><Link href="/pages/accessibility-page" className="hover:text-white transition-colors">Accessibility</Link></li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Bottom bar */}
-                <div className="mt-12 border-t border-white/20 pt-6 text-right text-sm text-gray-300">
+                <div className="mt-12 border-t border-white/20 pt-6 md:text-centerz text-sm text-gray-300 text-left">
                     Copyright © 2026 All Rights Reserved
                 </div>
             </div>

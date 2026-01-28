@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WelcomeSection() {
     return (
-        <section className="relative w-full overflow-hidden bg-white my-8 h-200 md:h-175 lg:h-150">
+        <section className="relative w-full overflow-hidden bg-white mb-8 h-200 md:h-175 lg:h-150">
             <div className="relative max-w-full px-0 py-20">
                 {/* Red background rectangle and yellow shape */}
                 <div className="absolute left-0 top-0 h-[95%] w-[50%] bg-[#D93337] z-0" />

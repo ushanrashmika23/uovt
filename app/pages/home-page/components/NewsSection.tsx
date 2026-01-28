@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from './Icons';
 const featuredNews = {
     date: "Dec 6, 2025",
     title: "Shri Ram College of Commerce and the University of Vocational Technology forge stronger academic collaboration",
-    image: "https://images.stockcake.com/public/6/f/7/6f7a6350-4c31-419b-9875-1030d373801f_large/academic-collaboration-meeting-stockcake.jpg"
+    image: "https://tse1.mm.bing.net/th/id/OIP.nM6hyPVu7GffriusCL7pVgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
 };
 
 const newsList = [
@@ -14,28 +14,28 @@ const newsList = [
         date: "Dec 8, 2025",
         title: "New research grant approved for AI development",
         institution: "Faculty of IT",
-        image: "https://images.stockcake.com/public/5/5/2/55297316-2428-4444-8848-d34e9177a296_large/futuristic-ai-interface-stockcake.jpg"
+        image: "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
     },
     {
         id: 2,
         date: "Dec 10, 2025",
         title: "Inter-university sports championship 2025 begins",
         institution: "Sports Council",
-        image: "https://images.stockcake.com/public/6/3/6/6360436d-9781-4560-84c9-c196412b9d03_large/intense-sports-match-stockcake.jpg"
+        image: "https://tse3.mm.bing.net/th/id/OIP.UBhfSRsfKw8iC-3VNlE4ewHaEj?w=1302&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         id: 3,
         date: "Dec 12, 2025",
         title: "Annual arts exhibition 'Creative Horizon' opens",
         institution: "Dept. of Aesthetics",
-        image: "https://images.stockcake.com/public/9/7/2/97210665-27a9-467f-94a0-760372074f0a_large/art-gallery-exhibit-stockcake.jpg"
+        image: "https://tse2.mm.bing.net/th/id/OIP.Gxmyg2MYJ6eJyIizz-6GTwHaE8?w=768&h=512&rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
         id: 4,
         date: "Dec 15, 2025",
         title: "Convocation ceremony scheduled for January",
         institution: "Registrar Office",
-        image: "https://images.stockcake.com/public/3/6/f/36fa17c6-7f8e-4f51-a20c-c69818840e69_large/graduate-holding-diploma-stockcake.jpg"
+        image: "https://tse1.mm.bing.net/th/id/OIP.Rt1YpKVVMb-Clb-DzsoElgHaEK?w=1000&h=563&rs=1&pid=ImgDetMain&o=7&rm=3"
     }
 ];
 
@@ -77,7 +77,7 @@ export default function NewsSection() {
                             alt="Featured" 
                             className="w-full h-64 object-cover" 
                         />
-                        <div className="p-8 flex flex-col flex-grow">
+                        <div className="p-8 flex flex-col grow">
                             <span className="text-gray-400 text-sm mb-4">{featuredNews.date}</span>
                             <h3 className="text-lg md:text-xl font-bold text-black leading-tight mb-6 line-clamp-4">
                                 {featuredNews.title}
