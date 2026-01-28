@@ -57,7 +57,7 @@ const StickyApplyWidget = () => {
             {/* Main Card Content */}
             <div
                 className={`bg-white rounded-t-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-500 ease-in-out origin-bottom
-                    ${isExpanded ? 'max-h-150 opacity-100 translate-y-0 -mb-10.0' : 'max-h-0 opacity-0 translate-y-10'}
+                    ${isExpanded ? 'max-h-150 opacity-100 translate-y-0' : 'max-h-0 opacity-0 translate-y-10'}
                     `}
                 style={{ width: '320px' }}
             >
@@ -106,7 +106,7 @@ const StickyApplyWidget = () => {
             {/* Minimized Trigger (Visible when collapsed) */}
             <button
                 onClick={() => setIsExpanded(true)}
-                className={`bg-[#FFE600] text-black font-bold py-3 px-6 rounded-t-xl shadow-lg flex items-center gap-2 transition-all duration-300
+                className={`absolute bottom-0 right-0 bg-[#FFE600] text-black font-bold py-3 px-6 rounded-t-xl shadow-lg flex items-center gap-2 transition-all duration-300
           ${isExpanded ? 'translate-y-20 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'}
         `}
             >

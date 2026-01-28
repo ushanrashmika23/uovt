@@ -16,9 +16,10 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 {
                     name: 'Faculties', href: '#',
                     subLinks: [
-                        { name: 'Faculty 1', href: '#' },
-                        { name: 'Faculty 2', href: '#' },
-                        { name: 'Faculty 3', href: '#' },
+                        { name: 'Faculty of Engineering Technology', href: '#' },
+                        { name: 'Faculty of Information Technology', href: '#' },
+                        { name: 'Faculty of Industrial Technology', href: '#' },
+                        { name: 'Faculty of Education', href: '#' },
                     ]
                 },
                 {
@@ -139,19 +140,19 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
 
                                 {/* Level 1 Dropdown */}
                                 {link.subLinks && (
-                                    <div className="absolute top-full left-0 w-56 bg-white shadow-xl border-t-4 border-[#BE1E2D] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    <div className="absolute top-full left-0 w-max min-w-[14rem] bg-white shadow-xl border-t-4 border-[#BE1E2D] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                         {link.subLinks.map((sub) => (
                                             <div key={sub.name} className="relative group/sub">
-                                                <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50">
+                                                <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50 whitespace-nowrap">
                                                     {sub.name}
-                                                    {sub.subLinks && <ChevronRight size={14} />}
+                                                    {sub.subLinks && <ChevronRight size={14} className="ml-2" />}
                                                 </a>
 
                                                 {/* Level 2 (Deep Nesting) */}
                                                 {sub.subLinks && (
-                                                    <div className="absolute top-0 left-full w-56 bg-white shadow-xl border-l border-gray-100 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
+                                                    <div className="absolute top-0 left-full w-max min-w-[14rem] bg-white shadow-xl border-l border-gray-100 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
                                                         {sub.subLinks.map((deep) => (
-                                                            <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D]">
+                                                            <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] whitespace-nowrap">
                                                                 {deep.name}
                                                             </a>
                                                         ))}
