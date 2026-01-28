@@ -8,8 +8,8 @@ const professors = [
         title: "Vice Chancellor of the University",
         image: "https://uovt.ac.lk/wp-content/uploads/2015/10/Professor-K.M.G.-Prasanna-Premadasa.jpg",
         bio: [
-            "UOVT is driven by curiosity and ambition, where practical skills meet technology and students are empowered to reach their full potential. Our programs combine academic knowledge with hands-on experience.",
-            "As a socially committed university, UOVT focuses on excellence in vocational and technological education, applied research, and community engagement."
+            "UoVT is driven by curiosity and ambition, where practical skills meet technology and students are empowered to reach their full potential. Our programs combine academic knowledge with hands-on experience.",
+            "As a socially committed university, UoVT focuses on excellence in vocational and technological education, applied research, and community engagement."
         ]
     },
     {

@@ -50,8 +50,8 @@ export default function UniversityLifeSection() {
                     </div>
 
                     {/* 4. Hashtag: Standard Square */}
-                    <div className="col-span-1 flex items-center justify-center bg-gray-200 font-bold text-2xl md:text-3xl aspect-square transition-all duration-300 hover:bg-gray-300 cursor-default">
-                        #UOVT
+                    <div className="col-span-1 flex items-center justify-center bg-gray-200 font-bold text-3xl md:text-4xl aspect-square transition-all duration-300 hover:bg-gray-300 cursor-default">
+                        #UoVT
                     </div>
 
                     {/* 5. Club: Wide Feature Image on Mobile (to break rhythm) */}

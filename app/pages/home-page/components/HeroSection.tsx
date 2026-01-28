@@ -43,9 +43,11 @@ export default function HeroSection() {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 5000);
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % data.length);
+        }, 5000);
         return () => clearInterval(interval);
-    }, []);
+    }, [currentIndex]);
 
     return (
         // <section className="relative h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] min-h-[400px] w-full overflow-hidden">
@@ -88,7 +90,7 @@ export default function HeroSection() {
             </div>
 
             {/* Slider dots */}
-            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex gap-2 md:gap-4">
+            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex gap-2 md:gap-4 z-20">
                 {data.map((_, index) => (
                     <button
                         key={index}

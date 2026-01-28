@@ -32,38 +32,38 @@ export default function Page() {
     }, []);
 
     return (
-        <div className="mb-0">
-            <div className={`z-50 transition-all duration-300 ${isScrolled ? 'fixed top-0 w-full shadow-md left-0' : 'fixed top-7 w-9/12 rounded-lg left-0 right-0'}`}>
-                <Navbar isScrolled={isScrolled} />
+            <div className="mb-0">
+                <div className={`z-50 transition-all duration-300 ${isScrolled ? 'fixed top-0 w-full shadow-md left-0' : 'fixed top-7 w-9/12 rounded-lg left-0 right-0'}`}>
+                    <Navbar isScrolled={isScrolled} />
+                </div>
+
+                <StickyApplyWidget />
+
+                <HeroSection />
+
+                <WelcomeSection />
+
+                <AcademicsSection />
+
+                <StatsSection />
+
+                <AboutProfessorSection />
+
+                <InclusivitySection />
+
+                <ResearchSection />
+
+                <UniversityLifeSection />
+
+                <div className="flex flex-col w-full">
+                    <NewsSection />
+                </div>
+
+                <div className="relative w-full">
+                    <EventsAndNoticesSection />
+                    <ContactInfoBar />
+                </div>
+
             </div>
-
-            <StickyApplyWidget />
-            
-            <HeroSection />
-
-            <WelcomeSection />
-
-            <AcademicsSection />
-
-            <StatsSection />
-
-            <AboutProfessorSection />
-
-            <InclusivitySection />
-
-            <ResearchSection />
-
-            <UniversityLifeSection />
-
-            <div className="flex flex-col w-full">
-                <NewsSection />
-            </div>
-
-            <div className="relative w-full">
-                <EventsAndNoticesSection />
-                <ContactInfoBar />
-            </div>
-
-        </div>
     );
 }

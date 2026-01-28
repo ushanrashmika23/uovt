@@ -1,8 +1,93 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, Search } from 'lucide-react';
-// import { s } from 'framer-motion/client';
+
+interface NavLink {
+    name: string;
+    href: string;
+    subLinks?: NavLink[];
+}
+
+const NavSubItem = ({ sub }: { sub: NavLink }) => {
+    const [opensLeft, setOpensLeft] = useState(false);
+    const itemRef = useRef<HTMLDivElement>(null);
+
+    const checkPosition = () => {
+        if (itemRef.current) {
+            const rect = itemRef.current.getBoundingClientRect();
+            // Check if there's enough space on the right for a 14rem (approx 224px) menu
+            // Adding a buffer for safety
+            const dropdownWidth = 250; 
+            if (rect.right + dropdownWidth > window.innerWidth) {
+                setOpensLeft(true);
+            } else {
+                setOpensLeft(false);
+            }
+        }
+    };
+
+    return (
+        <div ref={itemRef} className="relative group/sub" onMouseEnter={checkPosition}>
+            <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50 whitespace-nowrap">
+                {sub.name}
+                {sub.subLinks && <ChevronRight size={14} className="ml-2" />}
+            </a>
+
+            {/* Level 2 (Deep Nesting) */}
+            {sub.subLinks && (
+                <div className={`absolute top-0 w-max min-w-[14rem] bg-white shadow-xl border-gray-100 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200
+                    ${opensLeft ? 'right-full border-r mr-[1px]' : 'left-full border-l ml-[1px]'}
+                `}>
+                    {sub.subLinks.map((deep) => (
+                        <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] whitespace-nowrap">
+                            {deep.name}
+                        </a>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
+
+const NavItem = ({ link }: { link: NavLink }) => {
+    const [alignRight, setAlignRight] = useState(false);
+    const itemRef = useRef<HTMLDivElement>(null);
+
+    const checkPosition = () => {
+        if (itemRef.current) {
+            const rect = itemRef.current.getBoundingClientRect();
+            // If the item is in the right half of the screen, align dropdown to the right
+            // or strictly check if rect.left + width > window.innerWidth
+            const dropdownWidth = 250;
+            if (rect.left + dropdownWidth > window.innerWidth) {
+                setAlignRight(true);
+            } else {
+                setAlignRight(false);
+            }
+        }
+    };
+
+    return (
+        <div ref={itemRef} className="relative group flex items-center h-full" onMouseEnter={checkPosition}>
+            <a href={link.href} className="flex items-center gap-1 py-4 hover:text-[#BE1E2D] transition-colors">
+                {link.name}
+                {link.subLinks && <ChevronDown size={14} />}
+            </a>
+
+            {/* Level 1 Dropdown */}
+            {link.subLinks && (
+                <div className={`absolute top-full w-max min-w-[14rem] bg-white shadow-xl border-t-4 border-[#BE1E2D] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50
+                     ${alignRight ? 'right-0' : 'left-0'}
+                `}>
+                    {link.subLinks.map((sub) => (
+                        <NavSubItem key={sub.name} sub={sub} />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
 
 export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,9 +110,10 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 {
                     name: 'HRDC', href: '#',
                     subLinks: [
-                        { name: 'Course 1', href: '#' },
-                        { name: 'Course 2', href: '#' },
-                        { name: 'Course 3', href: '#' },
+                        { name: 'Adult and Part-Time Programs', href: '#' },
+                        { name: 'Programs for NVQ Sector', href: '#' },
+                        { name: 'Training of Trainers Programme', href: '#' },
+                        { name: 'Teacher Training', href: '#' },
                     ]
                 },
                 {
@@ -55,8 +141,16 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 {
                     name: 'Clubs and Societies', href: '#',
                     subLinks: [
-                        { name: 'Club 1', href: '#' },
-                        { name: 'Club 2', href: '#' },
+                        { name: 'Media Society', href: '#' },
+                        { name: 'IEEE Student Branch', href: '#' },
+                        { name: 'Sport Council', href: '#' },
+                        { name: 'Gavel Club', href: '#' },
+                        { name: 'Environment Society', href: '#' },
+                        { name: 'Food Tech Forum', href: '#' },
+                        { name: 'Civil Engineering Forum', href: '#' },
+                        { name: 'IET Society', href: '#' },
+                        { name: 'Literature Society', href: '#' },
+                        { name: 'Siyathra Sub-committee', href: '#' },
                     ]
                 },
                 { name: 'Student Assembly', href: '#' },
@@ -79,10 +173,10 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 { name: 'Events', href: '#' },
                 { name: 'News', href: '#' },
                 { name: 'Notices', href: '#' },
-                { name: 'Social;', href: '#' },
+                { name: 'Social', href: '#' },
             ]
         },
-        { name: 'About UOVT', href: '#',
+        { name: 'About UoVT', href: '#',
             subLinks: [
                 { name: 'History of UoVT', href: '#' },
                 { name: 'Leadership', href: '#' },
@@ -91,7 +185,16 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 { name: 'Quality & recognition', href: '#' },
                 { name: 'Sustainable development goals', href: '#' },
                 { name: 'Awards', href: '#' },
-                { name: 'University collages', href: '#' },
+                { name: 'University collages', href: '#',
+                    subLinks: [
+                        { name: 'University Colleges Ratmalana', href: '#' },
+                        { name: 'University Colleges Kuliyapitiya', href: '#' },
+                        { name: 'University Colleges Matara', href: '#' },
+                        { name: 'University Colleges Jaffna', href: '#' },
+                        { name: 'University Colleges Anuradhapura', href: '#' },
+                        { name: 'University Colleges Batangaka', href: '#' },
+                    ]
+                 },
             ]
          },
     ];
@@ -130,39 +233,9 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                     </div>
 
                     {/* Desktop Navigation with Recursive Dropdowns */}
-                    <nav className="hidden md:flex gap-4 lg:gap-6 text-xs lg:text-sm font-bold uppercase tracking-wide">
+                    <nav className="hidden md:flex gap-4 lg:gap-6 text-xs lg:text-sm font-semibold capitalize tracking-wide">
                         {navLinks.map((link) => (
-                            <div key={link.name} className="relative group flex items-center h-full">
-                                <a href={link.href} className="flex items-center gap-1 py-4 hover:text-[#BE1E2D] transition-colors">
-                                    {link.name}
-                                    {link.subLinks && <ChevronDown size={14} />}
-                                </a>
-
-                                {/* Level 1 Dropdown */}
-                                {link.subLinks && (
-                                    <div className="absolute top-full left-0 w-max min-w-[14rem] bg-white shadow-xl border-t-4 border-[#BE1E2D] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                        {link.subLinks.map((sub) => (
-                                            <div key={sub.name} className="relative group/sub">
-                                                <a href={sub.href} className="flex items-center justify-between px-4 py-3 text-gray-700 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] border-b border-gray-50 whitespace-nowrap">
-                                                    {sub.name}
-                                                    {sub.subLinks && <ChevronRight size={14} className="ml-2" />}
-                                                </a>
-
-                                                {/* Level 2 (Deep Nesting) */}
-                                                {sub.subLinks && (
-                                                    <div className="absolute top-0 left-full w-max min-w-[14rem] bg-white shadow-xl border-l border-gray-100 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
-                                                        {sub.subLinks.map((deep) => (
-                                                            <a key={deep.name} href={deep.href} className="block px-4 py-3 text-gray-600 font-semibold hover:bg-gray-50 hover:text-[#BE1E2D] whitespace-nowrap">
-                                                                {deep.name}
-                                                            </a>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
+                            <NavItem key={link.name} link={link} />
                         ))}
                     </nav>
 
@@ -174,7 +247,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
 
             {/* Mobile Sidebar */}
             <div className={`md:hidden bg-white border-t overflow-y-auto transition-all duration-300 ${isMenuOpen ? 'h-screen pb-32 opacity-100' : 'h-0 opacity-0'}`}>
-                <nav className="flex flex-col p-6 gap-2 font-bold uppercase text-sm">
+                <nav className="flex flex-col p-6 gap-2 font-semibold capitalize text-sm">
                     {navLinks.map((link) => (
                         <div key={link.name} className="flex flex-col">
                             <div

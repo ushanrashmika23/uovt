@@ -5,9 +5,9 @@ export default function WelcomeSection() {
         <section className="relative w-full overflow-hidden bg-white mb-8 h-200 md:h-175 lg:h-150">
             <div className="relative max-w-full px-0 py-20">
                 {/* Red background rectangle and yellow shape */}
-                <div className="absolute left-0 top-0 h-[95%] w-[50%] bg-[#D93337] z-0" />
+                <div className="absolute left-0 top-0 h-[95%] w-full md:w-[50%] bg-[#FFDD00] md:bg-[#D93337] z-0" />
                 <div
-                    className="absolute right-0 top-0 h-full w-[75%] bg-[#FFDD00] z-0"
+                    className="hidden md:block absolute right-0 top-0 h-full w-[75%] bg-[#FFDD00] z-0"
                     style={{
                         clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%)"
                     }}
@@ -28,7 +28,7 @@ export default function WelcomeSection() {
                     {/* Text Section */}
                     <div className="w-full md:w-1/2 text-black">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            Welcome to the UOVT
+                            Welcome to the UoVT
                         </h1>
 
                         <p className="text-sm md:text-base lg:text-lg leading-relaxed font-normal text-justify text-gray-900 mb-8">

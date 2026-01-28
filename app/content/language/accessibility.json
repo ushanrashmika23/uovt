@@ -1,0 +1,53 @@
+{
+  "en": {
+    "panelTitle": "Accessibility Settings",
+    "voiceWarningSinhala": "Sinhala voice not found. Please install a Sinhala voice pack in your OS.",
+    "voiceWarningTamil": "Tamil voice not found. Please install a Tamil voice pack in your OS.",
+    "voiceWarningDefault": "Selected language voice not found.",
+    "highContrast": "High Contrast",
+    "largerText": "Larger Text",
+    "smallerText": "Smaller Text",
+    "readableFont": "Readable Font",
+    "dyslexiaFont": "Dyslexia Friendly",
+    "magnifier": "Magnifier",
+    "textToSpeech": "Text to Speech",
+    "englishOption": "English (US)",
+    "sinhalaOption": "Sinhala (LK)",
+    "tamilOption": "Tamil (LK)",
+    "resetAll": "Reset All"
+  },
+  "si": {
+    "panelTitle": "ප්‍රවේශ සැකසුම්",
+    "voiceWarningSinhala": "සිංහල හඬ හමු නොවීය. කරුණාකර සිංහල හඬ පැකේජයක් ස්ථාපනය කරන්න.",
+    "voiceWarningTamil": "දෙමළ හඬ හමු නොවීය. කරුණාකර දෙමළ හඬ පැකේජයක් ස්ථාපනය කරන්න.",
+    "voiceWarningDefault": "තෝරාගත් භාෂාවේ හඬ හමු නොවීය.",
+    "highContrast": "ඉහළ වෙනස",
+    "largerText": "විශාල අකුරු",
+    "smallerText": "කුඩා අකුරු",
+    "readableFont": "කියවිය හැකි අකුරු",
+    "dyslexiaFont": "Dyslexia හිතකාමී",
+    "magnifier": "විශාලකය",
+    "textToSpeech": "වචන කියවීම",
+    "englishOption": "ඉංග්‍රීසි (US)",
+    "sinhalaOption": "සිංහල (LK)",
+    "tamilOption": "දෙමළ (LK)",
+    "resetAll": "සියල්ල යළි පිහිටුවන්න"
+  },
+  "ta": {
+    "panelTitle": "அணுகல் அமைப்புகள்",
+    "voiceWarningSinhala": "சிங்கள குரல் காணப்படவில்லை.",
+    "voiceWarningTamil": "தமிழ் குரல் காணப்படவில்லை.",
+    "voiceWarningDefault": "தேர்ந்தெடுக்கப்பட்ட மொழி குரல் காணப்படவில்லை.",
+    "highContrast": "உயர் மாறுபாடு",
+    "largerText": "பெரிய உரை",
+    "smallerText": "சிறிய உரை",
+    "readableFont": "படிக்கக்கூடிய எழுத்துரு",
+    "dyslexiaFont": "Dyslexia Friendly",
+    "magnifier": "உருப்பெருக்கி",
+    "textToSpeech": "உரையிலிருந்து பேச்சு",
+    "englishOption": "ஆங்கிலம் (US)",
+    "sinhalaOption": "சிங்களம் (LK)",
+    "tamilOption": "தமிழ் (LK)",
+    "resetAll": "அனைத்தையும் மீட்டமை"
+  }
+}

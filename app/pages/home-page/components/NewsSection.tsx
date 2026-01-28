@@ -51,6 +51,12 @@ export default function NewsSection() {
         setCurrentIndex((prev) => (prev === newsList.length - 1 ? 0 : prev + 1));
     };
 
+    // Auto-rotate every 5 seconds
+    React.useEffect(() => {
+        const interval = setInterval(handleNext, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     // Helper to get the second item based on current index (for desktop view)
     const getNextIndex = (idx: number) => (idx + 1) % newsList.length;
 

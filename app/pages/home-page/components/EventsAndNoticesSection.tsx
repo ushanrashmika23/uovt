@@ -71,6 +71,15 @@ export default function EventsAndNoticesSection() {
         setCurrentNoticeIndex((prev) => (prev === 0 ? noticesData.length - 1 : prev - 1));
     };
 
+    // Auto-rotate Events and Notices every 5 seconds
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            nextEvent();
+            nextNotice();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     // Helper variables for cleaner JSX
     const event = eventsData[currentEventIndex];
     const notice = noticesData[currentNoticeIndex];
@@ -162,7 +171,7 @@ export default function EventsAndNoticesSection() {
 
                             {/* Notice Content */}
                             {/* Added min-h to keep buttons aligned at bottom even if text is short */}
-                            <div className="mb-8 min-h-[120px] transition-all duration-300">
+                            <div className="mb-8 h-[120px] transition-all duration-300">
                                 <h3 className="text-sm font-bold text-black mb-4 animate-fadeIn">
                                     {notice.title}
                                 </h3>

@@ -27,10 +27,10 @@ export default function StatsSection() {
                     {/* Left: Yellow Info Box (Overlapping) */}
                     <div className="w-full lg:w-5/12 bg-[#FFEB3B] p-8 md:p-10 -mt-16 md:-mt-24 z-10 relative shadow-[0_-10px_0_#750A19dd]">
                         <h3 className="text-xl text-center md:text-2xl font-bold text-black mb-6 leading-tight">
-                            UOVT provides globally recognized qualifications in the field of IT & Business.
+                            UoVT provides globally recognized qualifications in the field of IT & Business.
                         </h3>
                         <p className="text-gray-900 text-sm md:text-base leading-relaxed text-justify">
-                            At UOVT, we offer vocational and technological degrees in engineering, IT, and business that prepare students for today&apos;s fast-changing world. Combining practical skills, academic excellence, and industry relevance, we have shaped higher education in Sri Lanka and helped thousands of alumni build successful careers locally and globally.
+                            At UoVT, we offer vocational and technological degrees in engineering, IT, and business that prepare students for today&apos;s fast-changing world. Combining practical skills, academic excellence, and industry relevance, we have shaped higher education in Sri Lanka and helped thousands of alumni build successful careers locally and globally.
                         </p>
                     </div>
 
