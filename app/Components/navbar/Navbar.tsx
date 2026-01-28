@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, Search } from 'lucide-react';
-import { s } from 'framer-motion/client';
+// import { s } from 'framer-motion/client';
 
 export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,7 +96,8 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     ];
 
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg md:mt-[-20px]' : 'lg:px-20 pt-5 lg:px-5 sm:-mt-[20px]'}`}>
+        // <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg md:mt-[-20px]' : 'lg:px-20 pt-5 lg:px-5 sm:-mt-[20px]'}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg md:mt-[-20px]' : 'lg:px-20 pt-5 lg:px-5 mt-[-20px] md:mt-[20px]'}`}>
 
             {/* Top utility bar */}
             <div className="hidden md:flex justify-end">

@@ -33,7 +33,7 @@ export default function Page() {
 
     return (
         <div className="mb-0">
-            <div className={`z-50 transition-all duration-300 ${isScrolled ? 'fixed top-0 w-full shadow-md mt-[-20px] left-0' : 'fixed top-7 w-9/12 rounded-lg left-0 right-0'}`}>
+            <div className={`z-50 transition-all duration-300 ${isScrolled ? 'fixed top-0 w-full shadow-md left-0' : 'fixed top-7 w-9/12 rounded-lg left-0 right-0'}`}>
                 <Navbar isScrolled={isScrolled} />
             </div>
 
