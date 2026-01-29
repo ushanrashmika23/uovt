@@ -1,10 +1,49 @@
-import React from 'react'
+"use client";
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Youtube, Settings, MessageCircle, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
+    const [showFloating, setShowFloating] = useState(false);
+    const [atFooter, setAtFooter] = useState(false);
+    const footerRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowFloating(true);
+            } else {
+                setShowFloating(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setAtFooter(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (footerRef.current) {
+            observer.observe(footerRef.current);
+        }
+
+        return () => {
+            if (footerRef.current) observer.unobserve(footerRef.current);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <footer className="bg-[#1b0f3a] text-white">
+        <footer ref={footerRef} className="bg-[#1b0f3a] text-white relative">
             <div className="mx-auto max-w-7xl px-6 py-16">
                 <div className="grid gap-12 md:grid-cols-4">
 
@@ -35,31 +74,31 @@ export default function Footer() {
                             <div className="flex gap-3">
                                 <a
                                     href="#"
-                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    className="flex h-7 w-7 items-center justify-center bg-[#BE1E2D] rounded transition-colors hover:bg-red-600"
                                     aria-label="Facebook"
                                 >
-                                    <Facebook className="h-6 w-6" />
+                                    <Facebook className="h-5 w-5 text-white" />
                                 </a>
                                 <a
                                     href="#"
-                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    className="flex h-7 w-7 items-center justify-center bg-[#BE1E2D] rounded transition-colors hover:bg-red-600"
                                     aria-label="LinkedIn"
                                 >
-                                    <Linkedin className="h-6 w-6" />
+                                    <Linkedin className="h-5 w-5 text-white" />
                                 </a>
                                 <a
                                     href="#"
-                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    className="flex h-7 w-7 items-center justify-center bg-[#BE1E2D] rounded transition-colors hover:bg-red-600"
                                     aria-label="Instagram"
                                 >
-                                    <Instagram className="h-6 w-6" />
+                                    <Instagram className="h-5 w-5 text-white" />
                                 </a>
                                 <a
                                     href="#"
-                                    className="flex h-8 w-6 items-center justify-center transition-colors"
+                                    className="flex h-7 w-7 items-center justify-center bg-[#BE1E2D] rounded transition-colors hover:bg-red-600"
                                     aria-label="YouTube"
                                 >
-                                    <Youtube className="h-6 w-6" />
+                                    <Youtube className="h-5 w-5 text-white" />
                                 </a>
                             </div>
                         </div>
@@ -104,6 +143,32 @@ export default function Footer() {
                 <div className="mt-12 border-t border-white/20 pt-6 md:text-centerz text-sm text-gray-300 text-left">
                     Copyright © 2026 All Rights Reserved
                 </div>
+            </div>
+
+            {/* Floating Action Buttons */}
+            <div className="fixed bottom-18 right-10 flex flex-col gap-3 z-10">
+                {/* Show Accessibility & Msg when scrolled > 100px and NOT at footer */}
+                {showFloating && !atFooter && (
+                    <>
+                        <button className="bg-[#4169E1] p-3 rounded-full shadow-lg hover:opacity-90 transition-all text-white" aria-label="Accessibility">
+                            <Settings className="w-6 h-6" />
+                        </button>
+                        <button className="bg-[#4169E1] p-3 rounded-full shadow-lg hover:opacity-90 transition-all text-white" aria-label="Messages">
+                            <MessageCircle className="w-6 h-6" />
+                        </button>
+                    </>
+                )}
+
+                {/* Show Scroll to Top ONLY when at footer */}
+                {atFooter && (
+                    <button 
+                        onClick={scrollToTop}
+                        className="bg-[#BE1E2D] p-3 rounded-full shadow-lg hover:opacity-90 transition-all text-white animate-bounce" 
+                        aria-label="Scroll to Top"
+                    >
+                        <ArrowUp className="w-6 h-6" />
+                    </button>
+                )}
             </div>
         </footer>
     )

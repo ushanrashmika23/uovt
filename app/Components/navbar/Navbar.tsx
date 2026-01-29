@@ -18,7 +18,7 @@ const NavSubItem = ({ sub }: { sub: NavLink }) => {
             const rect = itemRef.current.getBoundingClientRect();
             // Check if there's enough space on the right for a 14rem (approx 224px) menu
             // Adding a buffer for safety
-            const dropdownWidth = 250; 
+            const dropdownWidth = 250;
             if (rect.right + dropdownWidth > window.innerWidth) {
                 setOpensLeft(true);
             } else {
@@ -129,7 +129,8 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                         { name: 'Payment', href: '#' },
                         { name: 'Online Application Portal', href: '#' },
                     ]
-                }
+                },
+                { name: 'All Programs', href: '#' },
             ]
         },
         {
@@ -176,7 +177,8 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 { name: 'Social', href: '#' },
             ]
         },
-        { name: 'About UoVT', href: '#',
+        {
+            name: 'About UoVT', href: '#',
             subLinks: [
                 { name: 'History of UoVT', href: '#' },
                 { name: 'Leadership', href: '#' },
@@ -185,7 +187,8 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                 { name: 'Quality & recognition', href: '#' },
                 { name: 'Sustainable development goals', href: '#' },
                 { name: 'Awards', href: '#' },
-                { name: 'University collages', href: '#',
+                {
+                    name: 'University collages', href: '#',
                     subLinks: [
                         { name: 'University Colleges Ratmalana', href: '#' },
                         { name: 'University Colleges Kuliyapitiya', href: '#' },
@@ -194,9 +197,9 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                         { name: 'University Colleges Anuradhapura', href: '#' },
                         { name: 'University Colleges Batangaka', href: '#' },
                     ]
-                 },
+                },
             ]
-         },
+        },
     ];
 
     return (
@@ -247,7 +250,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
 
             {/* Mobile Sidebar */}
             <div className={`md:hidden bg-white border-t overflow-y-auto transition-all duration-300 ${isMenuOpen ? 'h-screen pb-32 opacity-100' : 'h-0 opacity-0'}`}>
-                <nav className="flex flex-col p-6 gap-2 font-semibold capitalize text-sm">
+                <nav className="flex flex-col p-6 gap-2 font-semibold capitalize text-base">
                     {navLinks.map((link) => (
                         <div key={link.name} className="flex flex-col">
                             <div
@@ -263,9 +266,9 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                                 <div className="pl-4 flex flex-col border-l-2 border-gray-100 mb-2">
                                     {link.subLinks.map(sub => (
                                         <div key={sub.name}>
-                                            <a href={sub.href} className="block py-2 text-xs text-gray-600 hover:text-[#BE1E2D]">{sub.name}</a>
+                                            <a href={sub.href} className="block py-2 text-sm text-gray-600 hover:text-[#BE1E2D]">{sub.name}</a>
                                             {sub.subLinks && sub.subLinks.map(deep => (
-                                                <a key={deep.name} href={deep.href} className="block pl-4 py-2 text-[10px] text-gray-400">— {deep.name}</a>
+                                                <a key={deep.name} href={deep.href} className="block pl-4 py-2 text-xs text-gray-400">— {deep.name}</a>
                                             ))}
                                         </div>
                                     ))}
