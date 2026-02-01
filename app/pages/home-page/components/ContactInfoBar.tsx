@@ -3,7 +3,7 @@ import { PhoneIcon, MapPinIcon, MailIcon } from './Icons';
 
 export default function ContactInfoBar() {
     return (
-        <div className="w-9/12 mx-auto -mt-28 -mb-8 relative z-20">
+        <div className="w-9/12 mx-auto relative z-20">
             <div className="bg-[#3B4685] rounded-xl text-white py-8 px-4 shadow-lg flex flex-col md:flex-row justify-around items-center gap-8 md:gap-0">
 
                 {/* Phone */}

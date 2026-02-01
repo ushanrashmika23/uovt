@@ -61,7 +61,6 @@ export default function Page() {
 
                 <div className="relative w-full">
                     <EventsAndNoticesSection />
-                    <ContactInfoBar />
                 </div>
 
             </div>

@@ -98,6 +98,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
         {
             name: 'Study', href: '#',
             subLinks: [
+                { name: 'All Programs', href: '#' },
                 {
                     name: 'Faculties', href: '#',
                     subLinks: [
@@ -130,7 +131,6 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                         { name: 'Online Application Portal', href: '#' },
                     ]
                 },
-                { name: 'All Programs', href: '#' },
             ]
         },
         {
