@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from './Icons';
 const featuredNews = {
     date: "Dec 6, 2025",
     title: "Shri Ram College of Commerce and the University of Vocational Technology forge stronger academic collaboration",
-    image: "https://tse1.mm.bing.net/th/id/OIP.nM6hyPVu7GffriusCL7pVgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+    image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018837/496926284_24516462181289336_4768970444010167231_n_fculhs.jpg"
 };
 
 const newsList = [
@@ -14,28 +14,28 @@ const newsList = [
         date: "Dec 8, 2025",
         title: "New research grant approved for AI development",
         institution: "Faculty of IT",
-        image: "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018854/ID_P0278_bi9iuu.jpg"
     },
     {
         id: 2,
         date: "Dec 10, 2025",
         title: "Inter-university sports championship 2025 begins",
         institution: "Sports Council",
-        image: "https://tse3.mm.bing.net/th/id/OIP.UBhfSRsfKw8iC-3VNlE4ewHaEj?w=1302&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018795/3Y6A1410_z63f4q.jpg"
     },
     {
         id: 3,
         date: "Dec 12, 2025",
         title: "Annual arts exhibition 'Creative Horizon' opens",
         institution: "Dept. of Aesthetics",
-        image: "https://tse2.mm.bing.net/th/id/OIP.Gxmyg2MYJ6eJyIizz-6GTwHaE8?w=768&h=512&rs=1&pid=ImgDetMain&o=7&rm=3"
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018854/ID_P0278_bi9iuu.jpg"
     },
     {
         id: 4,
         date: "Dec 15, 2025",
         title: "Convocation ceremony scheduled for January",
         institution: "Registrar Office",
-        image: "https://tse1.mm.bing.net/th/id/OIP.Rt1YpKVVMb-Clb-DzsoElgHaEK?w=1000&h=563&rs=1&pid=ImgDetMain&o=7&rm=3"
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018782/3Y6A1834_lec5lb.jpg"
     }
 ];
 

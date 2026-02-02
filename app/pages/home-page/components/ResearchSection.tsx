@@ -24,7 +24,7 @@ export default function ResearchSection() {
                         {/* The Image */}
                         <div className="relative z-10 w-full aspect-4/3 overflow-hidden">
                             <Image
-                                src="https://www.tus.ac.jp/en/assets/img/fac/riko/bg_ele.jpg"
+                                src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018765/6_py0mh6.png"
                                 alt="Students in Research Lab"
                                 fill
                                 className="object-cover"

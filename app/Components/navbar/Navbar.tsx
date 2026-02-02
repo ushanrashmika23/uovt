@@ -96,7 +96,7 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
     // Updated structure to support nested sub-links
     const navLinks = [
         {
-            name: 'Study', href: '#',
+            name: 'Academics & NVQ', href: '#',
             subLinks: [
                 { name: 'All Programs', href: '#' },
                 {
@@ -134,6 +134,24 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
             ]
         },
         {
+            name: 'Collaborate', href: '#',
+            subLinks: [
+                { name: 'Industry Partners', href: '#' },
+                { name: 'International Universities', href: '#' },
+            ]
+
+        },
+        {
+            name: 'Research & Innovation', href: '#',
+            subLinks: [
+                { name: 'Publications', href: '#' },
+                { name: 'Innovation and patents', href: '#' },
+                { name: 'Awards and competitions', href: '#' },
+                { name: 'IRS', href: '#' },
+                { name: 'SRS', href: '#' },
+            ]
+        },
+        {
             name: 'University Life', href: '#',
             subLinks: [
                 { name: 'Annual Events', href: '#' },
@@ -155,26 +173,15 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
                     ]
                 },
                 { name: 'Student Assembly', href: '#' },
-                { name: 'Success Stories', href: '#' },
-            ]
-        },
-        {
-            name: 'Research Industry', href: '#',
-            subLinks: [
-                { name: 'Publications', href: '#' },
-                { name: 'Innovation and patents', href: '#' },
-                { name: 'Awards and competitions', href: '#' },
-                { name: 'IRS', href: '#' },
-                { name: 'SRS', href: '#' },
-            ]
-        },
-        {
-            name: 'Community', href: '#',
-            subLinks: [
-                { name: 'Events', href: '#' },
-                { name: 'News', href: '#' },
-                { name: 'Notices', href: '#' },
-                { name: 'Social', href: '#' },
+                { name: 'Success Stories', href: '#' }, {
+                    name: 'Community', href: '#',
+                    subLinks: [
+                        { name: 'Events', href: '#' },
+                        { name: 'News', href: '#' },
+                        { name: 'Notices', href: '#' },
+                        { name: 'Social', href: '#' },
+                    ]
+                },
             ]
         },
         {

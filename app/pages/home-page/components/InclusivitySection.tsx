@@ -11,23 +11,23 @@ const cards: CardData[] = [
     {
         title: "Scholarship",
         description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
-        img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018752/3Y6A1867_z4mop1.jpg"
     },
     {
         title: "Dean List",
         description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
-        img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
-    },
-    {
-        title: "Bursary",
-        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
-        img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018756/3Z1A8990_t1miwu.jpg"
     },
     {
         title: "Grant",
         description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
-        img: "https://images.stockcake.com/public/d/6/d/d6dbe0f8-61e7-4a55-92a6-e096bfee237a_large/grand-award-ceremony-stockcake.jpg"
-    }
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018774/3Y6A1523_r6iqz2.jpg"
+    },
+    {
+        title: "Bursary",
+        description: "A five-year work and study programme with corporate partners where you earn from day one. Graduate with a degree and five years of experience, giving you a valuable head start in your career.",
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018763/4_d1az0m.jpg"
+    },
 ];
 
 export default function InclusivitySection() {

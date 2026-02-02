@@ -19,7 +19,7 @@ export default function UniversityLifeSection() {
                     {/* 1. Social Works: HERO Image on Mobile (Full Width), Square on Desktop */}
                     <div className="col-span-2 lg:col-span-1 relative aspect-[2/1] lg:aspect-square overflow-hidden group cursor-pointer">
                         <img
-                            src="https://www.ucd.ie/law/t4media/JMK%202024%207.jpg"
+                            src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018772/3Y6A1504_jzkbyp.jpg"
                             alt="Social Works"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
@@ -57,7 +57,7 @@ export default function UniversityLifeSection() {
                     {/* 5. Club: Wide Feature Image on Mobile (to break rhythm) */}
                     <div className="col-span-2 lg:col-span-1 relative aspect-[2/1] lg:aspect-square overflow-hidden group cursor-pointer">
                         <img
-                            src="https://tse2.mm.bing.net/th/id/OIP.2AHsXZumx0Cx9ZSbju-2rgHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018837/496926284_24516462181289336_4768970444010167231_n_fculhs.jpg"
                             alt="Club"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
@@ -69,7 +69,7 @@ export default function UniversityLifeSection() {
                     {/* 6. Music: Standard Square */}
                     <div className="col-span-1 relative aspect-square overflow-hidden group cursor-pointer">
                         <img
-                            src="https://ac3filter.b-cdn.net/wp-content/uploads/772700.jpg"
+                            src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018825/3Y6A0446_fisi9u.jpg"
                             alt="Music"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
@@ -81,7 +81,7 @@ export default function UniversityLifeSection() {
                     {/* 7. Traveling: Standard Square */}
                     <div className="col-span-1 relative aspect-square overflow-hidden group cursor-pointer">
                         <img
-                            src="https://media.cntraveler.com/photos/59cd14cb9465da68882fb4f4/master/pass/Debate_GettyImages-585587819.jpg"
+                            src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018835/WhatsApp_Image_2026-01-03_at_4.26.19_PM_dtjdrx.jpg"
                             alt="Traveling"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
@@ -93,7 +93,7 @@ export default function UniversityLifeSection() {
                     {/* 8. Art: Wide Feature Image on Mobile */}
                     <div className="col-span-2 lg:col-span-1 relative aspect-[2/1] lg:aspect-square overflow-hidden group cursor-pointer">
                         <img
-                            src="https://mymodernmet.com/wp/wp-content/uploads/2019/03/elements-of-art-thumbnail-1.jpg"
+                            src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018758/7_w4acyf.png"
                             alt="Art"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />

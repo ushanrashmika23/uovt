@@ -12,20 +12,26 @@ interface HeroData {
 
 const data: HeroData[] = [
     {
-        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1768985745/hero_f6oslh.png",
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018834/11111_sgvef1.jpg",
+        title: "IT ALL STARTS HERE 3",
+        description: "Find your course and apply before the UCAS deadline",
+        link: "#"
+    },
+    {
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018762/Anuradapura_ypyr9u.jpg",
         title: "IT ALL STARTS HERE 1",
         description: "Find your course and apply before the UCAS deadline",
         link: "#"
     },
     {
-        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1768985745/hero_f6oslh.png",
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018863/3Y6A1475_vff7u0.jpg",
         title: "IT ALL STARTS HERE 2",
         description: "Find your course and apply before the UCAS deadline",
         link: "#"
     },
     {
-        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1768985745/hero_f6oslh.png",
-        title: "IT ALL STARTS HERE 3",
+        img: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018817/3Y6A1562_jplmwf.jpg",
+        title: "IT ALL STARTS HERE 4",
         description: "Find your course and apply before the UCAS deadline",
         link: "#"
     }

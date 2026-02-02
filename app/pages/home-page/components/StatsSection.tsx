@@ -11,7 +11,7 @@ export default function StatsSection() {
                 {/* Top Section: Hero Image */}
                 <div className="relative w-full h-100 md:h-125 overflow-hidden rounded-sm shadow-md">
                     <Image
-                        src="https://www.iit.ac.lk/wp-content/uploads/2025/11/IIT-UoW-Convocation-2025.png"
+                        src="https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018788/ID_P0367_pbiesl.jpg"
                         alt="Convocation Ceremony"
                         fill
                         className="object-cover object-center"

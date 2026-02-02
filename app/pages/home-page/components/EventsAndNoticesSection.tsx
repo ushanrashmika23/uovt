@@ -9,7 +9,7 @@ const eventsData = [
         title: "Finished your O/Ls or A/Ls and thinking about what comes next?",
         date: "Jan 3, 2026",
         time: "09.00 AM",
-        image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80",
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018825/3Y6A0446_fisi9u.jpg",
         tag: "Annual Convocation"
     },
     {
@@ -17,7 +17,7 @@ const eventsData = [
         title: "Inter-University Hackathon: Code the Future 2026",
         date: "Feb 14, 2026",
         time: "10.00 AM",
-        image: "https://images.unsplash.com/photo-1504384308090-c54be3852f95?auto=format&fit=crop&q=80",
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018831/3Y6A1325_j2zf1v.jpg",
         tag: "Tech Competition"
     },
     {
@@ -25,7 +25,7 @@ const eventsData = [
         title: "Grand Opening of the New Science Research Facility",
         date: "Mar 10, 2026",
         time: "08.30 AM",
-        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80",
+        image: "https://res.cloudinary.com/dtddjfvcn/image/upload/v1770018770/3Y6A1486_g854mj.jpg",
         tag: "Campus News"
     }
 ];
