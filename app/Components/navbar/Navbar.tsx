@@ -134,10 +134,13 @@ export default function Navbar({ isScrolled }: { isScrolled?: boolean }) {
             ]
         },
         {
-            name: 'Collaborate', href: '#',
+            name: 'Industry & Partners', href: '#',
             subLinks: [
-                { name: 'Industry Partners', href: '#' },
-                { name: 'International Universities', href: '#' },
+                { name: 'Partner with us', href: '#' },
+                { name: 'Talent pipeline', href: '#' },
+                { name: 'Use our facilities', href: '#' },
+                { name: 'Industry Advisory Boards (IAB)', href: '#' },
+                { name: 'International Affairs', href: '#' },
             ]
 
         },
